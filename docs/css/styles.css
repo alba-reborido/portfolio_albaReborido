@@ -1,0 +1,698 @@
+/* =======================
+   Header
+======================= */
+header {
+  background-color: #222;
+  color: #fff;
+  padding: 1rem 0;
+}
+
+header a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+header a:hover,
+header .nav-link:hover {
+  color: #eee;
+}
+
+header .brand-badge {
+  font-family: "Cinzel", serif;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgba(255,255,255,.85);
+  color: #fff;
+  background-color: rgba(255,255,255,.08);
+  transition: transform .2s ease, background-color .2s ease;
+}
+
+header .brand-badge:hover {
+  transform: translateY(-1px) scale(1.05);
+  background-color: rgba(255,255,255,.15);
+}
+
+/*Cambio de idioma*/
+#langMenu {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #f5f5f5;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 24px;
+  padding: 0.3rem 0.7rem;
+  margin-left: 29px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s ease, color 0.3s;
+}
+
+#langMenu:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  transform: scale(1.05);
+  color: #fff;
+}
+
+.dropdown-menu {
+  background-color: #222;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.dropdown-menu .dropdown-item {
+  color: #f5f5f5;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dropdown-menu .dropdown-item:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+
+
+
+/* =======================
+   Main / about.html
+======================= */
+main {
+  position: relative;
+  background-image: url('../img/desk-593327_1280.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.fade-in-delay {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInUp 0.8s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.btn-minimal {
+    background-color: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s, transform 0.2s ease, color 0.3s, border-color 0.3s;
+}   
+
+.btn-minimal:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: scale(1.05);
+}
+
+.btn-minimal:focus,
+.btn-minimal:active {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.5);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(255,255,255,0.3);
+}
+
+main::before {
+  content: '';
+  position: absolute;
+  top:0; left:0; right:0; bottom:0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 0;
+}
+
+main .container {
+  position: relative;
+  z-index: 1; 
+}
+
+/* =======================
+   Footer
+======================= */
+footer {
+  background-color: #222;
+  color: #fff;
+  font-size: 0.9rem;
+  padding: 2rem 0;
+  height: 135px;
+}
+
+/* Contenedor de columnas */
+footer .footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 1rem;
+}
+
+/* Columnas */
+footer .footer-left,
+footer .footer-center,
+footer .footer-right {
+  flex: 1;
+  min-width: 150px;
+  text-align: center;
+}
+
+/* Alineación en pantallas grandes */
+@media (min-width: 768px) {
+  footer .footer-left { text-align: left; }
+  footer .footer-center { text-align: center; }
+  footer .footer-right { text-align: right; }
+}
+
+/* Links del footer (sobre-escriben Bootstrap) */
+footer a,
+footer .footer-container a {
+  color: #bbbaba;      
+  text-decoration: none;
+  transition: color 0.3s, transform 0.2s ease;
+}
+
+footer a:hover,
+footer .footer-container a:hover {
+  color: #fff; 
+    
+
+}
+
+/* Copyright separado */
+footer .copyright {
+  border-top: 1px solid rgba(255,255,255,0.2);
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  text-align: center;
+  padding-top: 0.5rem;
+}
+
+/* Sello AR en footer */
+footer .brand-badge {
+  font-family: "Cinzel", serif;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgba(255,255,255,.85);
+  color: #fff;
+  background-color: rgba(255,255,255,.08);
+  transition: transform .2s ease, background-color .2s ease;
+}
+
+footer .brand-badge:hover {
+  transform: translateY(-1px) scale(1.05);
+  background-color: rgba(255,255,255,.15);
+}
+
+
+/* =======================
+   Main / about.html
+======================= */
+
+/* Contenedor flexible */
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Imagen */
+.about-image img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-image img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* Texto */
+.about-text {
+  flex: 1;
+}
+
+/* Título */
+.about-text h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Lead */
+.about-text .lead {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+/* Responsivo: en pantallas pequeñas, la imagen arriba */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about-image img {
+    margin-bottom: 1.5rem;
+  }
+}
+
+
+/* =======================
+   Main / projects.html
+======================= */
+/* Sección principal */
+.projects {
+  background-color: #eaeaea;
+  padding: 4rem 2rem;
+}
+
+/* Contenedor */
+.projects .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Encabezado de sección */
+.projects-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  background-color: #f5f5f5;
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.projects-header h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+
+.projects-header p {
+  font-size: 1.2rem;
+  color: #444;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+/* Tarjeta de proyecto */
+.project-card {
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Imagen del proyecto */
+.project-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Información del proyecto */
+.project-info {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project-info h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  color: #111;
+}
+
+.project-info p {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 0.5rem;
+}
+
+.project-info strong {
+  color: #000;
+}
+
+/* Enlace del proyecto */
+.project-info a {
+  margin-top: auto;
+  align-self: center;
+  background-color: #333;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.project-info a:hover {
+  background-color: #555;
+  transform: scale(1.05);
+}
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-top: 1rem;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+@media (max-width: 600px) {
+  .projects-header h2 {
+    font-size: 2rem;
+  }
+
+  .projects-header p {
+    font-size: 1rem;
+  }
+
+  .project-info h3 {
+    font-size: 1.2rem;
+  }
+
+  .project-info p {
+    font-size: 0.95rem;
+  }
+}
+
+/* =======================
+   Main / contact.html
+======================= */
+
+/* Sección principal */
+.contact-section {
+  background-color: #eaeaea;
+  padding: 4rem 2rem;
+}
+
+/* Contenedor */
+.contact-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+/*Encabezado superior*/
+
+.contact-header {
+  text-align: center;
+  background-color: #f5f5f5;
+  padding: 2.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  margin-bottom: 3rem;
+}
+
+.contact-header h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+
+.contact-header p {
+  font-size: 1.2rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+
+/* =======================
+   Formulario de contacto
+======================= */
+
+.contact-form {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin: 0 auto 3rem auto;
+  max-width: 600px;
+  width: 100%;
+}
+
+
+.form-row {
+  display: flex;
+  align-items: left;
+  gap: 1rem;
+}
+
+.form-row label {
+  width: 160px;
+  font-weight: 600;
+  color: #333;
+}
+
+.form-row input,
+.form-row textarea {
+  flex: 1;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-row input:focus,
+.form-row textarea:focus {
+  border-color: #888;
+  outline: none;
+}
+
+.btn-enviar {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.4rem 1rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  display: inline-block;
+  align-self: flex-start;
+  min-width: 120px;
+  text-align: center;
+  margin: auto;
+}
+
+.btn-enviar:hover {
+  background-color: #555;
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.btn-enviar:active {
+  background-color: #222;
+  transform: scale(0.98);
+  box-shadow: inset 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* Mensajes de error */
+.error-message {
+  color: #d9534f;
+  font-size: 0.9rem;
+  margin-top: 4px;
+  font-style: italic;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateY(-5px);
+}
+
+.error-message.show {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Estilo para campos inválidos */
+input.touched:invalid,
+textarea.touched:invalid {
+  border-color: #d9534f;
+  box-shadow: 0 0 0 0.2rem rgba(217, 83, 79, 0.25);
+}
+
+/* Animación de sacudida (opcional) */
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  50% { transform: translateX(4px); }
+  75% { transform: translateX(-4px); }
+  100% { transform: translateX(0); }
+}
+
+input.error-animate,
+textarea.error-animate {
+  animation: shake 0.3s ease;
+}
+
+
+
+
+@media (max-width: 600px) {
+  .form-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .form-row label {
+    width: auto;
+  }
+}
+
+
+
+/*Enlaces de contacto*/
+
+.contact-links {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 1rem;
+  color: #222;
+}
+
+.contact-links p {
+  margin-bottom: 1rem;
+  color: #444;
+}
+
+.contact-links a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  margin: 0 0.8rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.contact-links a:hover {
+  color: #000;
+  transform: scale(1.05);
+}
+
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+
+
+/* Cierre */
+
+.contact-summary {
+  background-color: #f5f5f5;
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 1.1rem;
+  color: #333;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.contact-summary p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+
+/*Responsive*/
+
+@media (max-width: 600px) {
+  .contact-header h2 {
+    font-size: 2rem;
+  }
+
+  .contact-header p,
+  .contact-summary p {
+    font-size: 1rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.95rem;
+  }
+}
