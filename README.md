@@ -25,7 +25,7 @@ Este sitio está construido con algunas de las herramientas que más disfruto:
 ---
 
 ## 🌍 Ver el portfolio en línea  
-👉 [Enlace al portfolio desplegado con GitHub Pages]()  
+👉 [Enlace al portfolio desplegado con GitHub Pages](https://alba-reborido.github.io/portfolio_albaReborido/index.html)  
 
 ---
 
